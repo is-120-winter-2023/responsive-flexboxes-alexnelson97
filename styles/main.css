@@ -292,6 +292,7 @@ footer p {
 /**** cards ****/
 .cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -305,18 +306,18 @@ footer p {
   font-weight: 400;
 }
 
-.card p {
-  position: absolute;
-  inset: 0;
-  margin: 0;
-  line-height: 1;
-  padding: 30% var(--gutter) 1rem;
+.card:hover p {
   background-color: rgb(0 0 0 / 60%);
   transition: background-color 400ms ease-in-out;
 }
 
-.card:hover p {
-  color: transparent;
+.card p {
+  position: absolute;
+  color: #fff;
+  inset: 0;
+  margin: 0;
+  line-height: 1;
+  padding: 30% var(--gutter) 1rem;
   background-color: rgb(0 0 0 / 0%);
 }
 
@@ -337,5 +338,16 @@ footer p {
   .panel .image-wrapper {
     order: 0;
     flex: 1 1 60%;
+  }
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media (min-width: 1000px) {
+  .card {
+    flex-basis: calc(25% - 20px);
   }
 }
