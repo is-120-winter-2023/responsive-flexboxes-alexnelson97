@@ -132,14 +132,12 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-
 }
 
 main {
   align-self: center;
   padding: 0 var(--gutter);
   max-width: 70rem;
-
 }
 
 .hero .text-wrapper {
@@ -154,43 +152,41 @@ main {
 }
 
 .hero h1 {
-  
-   font-family: "pacifico", cursive;
-   color: var(--color-secondary);
-   margin: 0;
-   padding-top: 5rem;
-   text-align: center;
-   font-size: clamp (5rem, 14vw + 1rem, 14rem);
-   font-weight: 600;
-   line-height: 1;
-   text-shadow: 3px 3px 4px black:
+  font-family: "pacifico", cursive;
+  color: var(--color-secondary);
+  margin: 0;
+  padding-top: 5rem;
+  text-align: center;
+  font-size: clamp (5rem, 14vw + 1rem, 14rem);
+  font-weight: 600;
+  line-height: 1;
+  text-shadow: 3px 3px 4px black;
 }
 
-
 .hero p {
- font-family: "Istok Web", sans-serif;
- color: var(--color-secondary);
- text-align: center;
- font-size: 1.5rem;
- margin: 0;
+  font-family: "Istok Web", sans-serif;
+  color: var(--color-secondary);
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .hero {
- position: relative;
+  position: relative;
 }
 
 .hero .text-wrapper {
- position: absolute;
- inset: 0;
- background-color: rgb(0 0 0 / 30%);
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 30%);
 }
-hero.picture{
- height: 100%;
+hero.picture {
+  height: 100%;
 }
 picture img {
- height: 100%;
- object-fit: cover;
- object-position: left center;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
 }
 
 /**** Menu ****/
@@ -242,7 +238,6 @@ header nav a[href]:hover::after {
   transform-origin: left;
 }
 
-
 h1 {
   font-size: 3.5rem;
   color: var(--color-dark-accent);
@@ -283,6 +278,16 @@ footer p {
   margin: 0;
   padding: 3rem 1rem 6rem;
 }
+/***** Panels *****/
+
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel .image-wrapper {
+  order: -1;
+}
 
 /**** cards ****/
 .cards {
@@ -298,6 +303,7 @@ footer p {
   font-family: "Istok Web", sans-serif;
   font-size: 2rem;
   font-weight: 400;
+}
 
 .card p {
   position: absolute;
