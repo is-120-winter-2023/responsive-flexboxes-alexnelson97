@@ -102,13 +102,13 @@ a {
   text-decoration: none;
 }
 .button {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   border: none;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  color: var(--color-secondary);
+  color: #fff;
   transition: background-color 300ms ease;
 }
 body {
@@ -150,10 +150,10 @@ aside {
   margin-bottom: 6rem;
 }
 footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 footer p {
-  color: var(--color-secondary);
+  color: #fff;
   margin: 0;
   padding: 3rem 1rem 6rem;
 }
@@ -190,6 +190,28 @@ footer p {
 .hero {
   position: relative;
   margin-bottom: var(--gap);
+}
+.video {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.video-background {
+  background: #000;
+  position: absolute;
+  inset: 0;
+  z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 hero.picture {
@@ -302,6 +324,7 @@ header nav a {
   gap: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  margin-top: 6rem;
   margin-bottom: 6rem;
 }
 .card {
@@ -414,5 +437,18 @@ header nav a {
 @media (min-width: 1000px) {
   .card {
     flex-basis: calc(25% - 20px);
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
   }
 }
